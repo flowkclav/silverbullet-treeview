@@ -8,5 +8,8 @@
     "debug": "silverbullet plug:compile --info --debug -c deno.json treeview.plug.yaml",
     "watch": "silverbullet plug:compile treeview.plug.yaml -w --debug -c deno.json",
     "test": "deno test -A --unstable-kv  --unstable-worker-options"
-  }
+  },
+  "patch": [
+    "../silverbullet"
+  ]
 }

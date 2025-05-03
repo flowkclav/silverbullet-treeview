@@ -8,7 +8,6 @@ import {
   Position,
   setTreeViewEnabled,
 } from "./config.ts";
-import { supportsPageRenaming } from "./compatability.ts";
 import { getPlugConfig } from "./config.ts";
 
 /**
@@ -44,10 +43,11 @@ export async function hideTree() {
  */
 export async function showTreeIfEnabled() {
   try {
-    const env = await system.getEnv();
+    /*const env = await system.getEnv();
     if (env === "server") {
       return;
-    }
+    }*/
+    //getEnv deprecated, we can assume we're always running on client
 
     if (await isTreeViewEnabled()) {
       return await showTree();

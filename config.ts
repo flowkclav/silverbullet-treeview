@@ -127,7 +127,7 @@ async function showConfigErrorNotification(error: unknown) {
 let configErrorShown = false;
 
 export async function getPlugConfig(): Promise<TreeViewConfig> {
-  const userConfig = await system.getSpaceConfig("treeview", {});
+  const userConfig = await system.getConfig("treeview", {});
 
   try {
     return treeViewConfigSchema.parse(userConfig || {});
