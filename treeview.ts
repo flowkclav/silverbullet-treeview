@@ -109,7 +109,7 @@ export async function showTree() {
     config.position,
     config.size,
     `
-      <link rel="stylesheet" href="/.client/main.css" />
+      <link rel="stylesheet" href=".client/main.css" />
       <style>
         ${sortableTreeCss}
         ${plugCss}
